@@ -7,4 +7,4 @@ require (
 	github.com/drand/kyber v1.0.1-0.20191229124149-558f79cb7274
 )
 
-replace github.com/dedis/drand => ../
+replace github.com/dedis/drand => ../../
