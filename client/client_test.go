@@ -7,12 +7,12 @@ import (
 	"testing"
 	"time"
 
-	"github.com/drand/drand/chain"
-	"github.com/drand/drand/client"
-	"github.com/drand/drand/client/http"
-	httpmock "github.com/drand/drand/client/test/http/mock"
-	"github.com/drand/drand/client/test/result/mock"
-	"github.com/drand/drand/test"
+	"github.com/Giordyfish/drand/chain"
+	"github.com/Giordyfish/drand/client"
+	"github.com/Giordyfish/drand/client/http"
+	httpmock "github.com/Giordyfish/drand/client/test/http/mock"
+	"github.com/Giordyfish/drand/client/test/result/mock"
+	"github.com/Giordyfish/drand/test"
 )
 
 func TestClientConstraints(t *testing.T) {

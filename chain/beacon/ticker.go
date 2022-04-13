@@ -3,7 +3,7 @@ package beacon
 import (
 	"time"
 
-	"github.com/drand/drand/chain"
+	"github.com/Giordyfish/drand/chain"
 	clock "github.com/jonboulle/clockwork"
 )
 

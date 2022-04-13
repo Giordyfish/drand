@@ -7,8 +7,8 @@ import (
 
 	json "github.com/nikkolasg/hexjson"
 
-	"github.com/drand/drand/protobuf/drand"
-	"github.com/drand/drand/test/mock"
+	"github.com/Giordyfish/drand/protobuf/drand"
+	"github.com/Giordyfish/drand/test/mock"
 )
 
 const serve = "localhost:1969"

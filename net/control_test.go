@@ -6,7 +6,7 @@ import (
 	"runtime"
 	"testing"
 
-	testnet "github.com/drand/drand/test/net"
+	testnet "github.com/Giordyfish/drand/test/net"
 )
 
 const runtimeGOOSWindows = "windows"

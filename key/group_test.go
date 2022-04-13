@@ -6,7 +6,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/drand/drand/protobuf/drand"
+	"github.com/Giordyfish/drand/protobuf/drand"
 	kyber "github.com/drand/kyber"
 	"github.com/drand/kyber/util/random"
 	"github.com/stretchr/testify/require"

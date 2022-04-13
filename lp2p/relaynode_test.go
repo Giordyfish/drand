@@ -11,11 +11,11 @@ import (
 	"testing"
 	"time"
 
-	"github.com/drand/drand/chain"
-	"github.com/drand/drand/client"
-	"github.com/drand/drand/client/test/result/mock"
-	"github.com/drand/drand/log"
-	"github.com/drand/drand/test"
+	"github.com/Giordyfish/drand/chain"
+	"github.com/Giordyfish/drand/client"
+	"github.com/Giordyfish/drand/client/test/result/mock"
+	"github.com/Giordyfish/drand/log"
+	"github.com/Giordyfish/drand/test"
 )
 
 type mockClient struct {

@@ -5,7 +5,7 @@ import (
 	"path"
 	"time"
 
-	"github.com/drand/drand/fs"
+	"github.com/Giordyfish/drand/fs"
 )
 
 // DefaultConfigFolderName is the name of the folder containing all key materials

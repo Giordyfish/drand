@@ -3,10 +3,10 @@ package beacon
 import (
 	"testing"
 
-	"github.com/drand/drand/chain"
-	"github.com/drand/drand/key"
-	"github.com/drand/drand/log"
-	"github.com/drand/drand/protobuf/drand"
+	"github.com/Giordyfish/drand/chain"
+	"github.com/Giordyfish/drand/key"
+	"github.com/Giordyfish/drand/log"
+	"github.com/Giordyfish/drand/protobuf/drand"
 	"github.com/drand/kyber/share"
 	"github.com/stretchr/testify/require"
 )

@@ -8,14 +8,14 @@ import (
 	"sync"
 	"time"
 
-	"github.com/drand/drand/chain"
-	"github.com/drand/drand/chain/beacon"
-	"github.com/drand/drand/chain/boltdb"
-	"github.com/drand/drand/fs"
-	"github.com/drand/drand/http"
-	"github.com/drand/drand/key"
-	"github.com/drand/drand/log"
-	"github.com/drand/drand/net"
+	"github.com/Giordyfish/drand/chain"
+	"github.com/Giordyfish/drand/chain/beacon"
+	"github.com/Giordyfish/drand/chain/boltdb"
+	"github.com/Giordyfish/drand/fs"
+	"github.com/Giordyfish/drand/http"
+	"github.com/Giordyfish/drand/key"
+	"github.com/Giordyfish/drand/log"
+	"github.com/Giordyfish/drand/net"
 	"github.com/drand/kyber/share/dkg"
 )
 

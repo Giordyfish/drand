@@ -15,10 +15,10 @@ import (
 
 	json "github.com/nikkolasg/hexjson"
 
-	"github.com/drand/drand/chain"
-	"github.com/drand/drand/demo/node"
-	"github.com/drand/drand/key"
-	"github.com/drand/drand/protobuf/drand"
+	"github.com/Giordyfish/drand/chain"
+	"github.com/Giordyfish/drand/demo/node"
+	"github.com/Giordyfish/drand/key"
+	"github.com/Giordyfish/drand/protobuf/drand"
 )
 
 // 1s after dkg finishes, (new or reshared) beacon starts

@@ -8,7 +8,7 @@ import (
 	"syscall"
 	"text/template"
 
-	"github.com/drand/drand/demo/lib"
+	"github.com/Giordyfish/drand/demo/lib"
 )
 
 // Test plans:

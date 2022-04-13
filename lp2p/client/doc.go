@@ -20,9 +20,9 @@ Example using "WithChainInfo()":
 	package main
 
 	import (
-		"github.com/drand/drand/chain"
-		"github.com/drand/drand/client"
-		gclient "github.com/drand/drand/lp2p/client"
+		"github.com/Giordyfish/drand/chain"
+		"github.com/Giordyfish/drand/client"
+		gclient "github.com/Giordyfish/drand/lp2p/client"
 		pubsub "github.com/libp2p/go-libp2p-pubsub"
 	)
 
@@ -51,9 +51,9 @@ Example using "WithChainHash()" and combining it with a different client:
 	import (
 		"encoding/hex"
 
-		"github.com/drand/drand/client"
-		"github.com/drand/drand/client/http"
-		gclient "github.com/drand/drand/lp2p/client"
+		"github.com/Giordyfish/drand/client"
+		"github.com/Giordyfish/drand/client/http"
+		gclient "github.com/Giordyfish/drand/lp2p/client"
 		pubsub "github.com/libp2p/go-libp2p-pubsub"
 	)
 

@@ -6,8 +6,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/drand/drand/chain"
-	"github.com/drand/drand/chain/boltdb"
+	"github.com/Giordyfish/drand/chain"
+	"github.com/Giordyfish/drand/chain/boltdb"
 	"github.com/stretchr/testify/require"
 )
 

@@ -6,7 +6,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/drand/drand/client/test/result/mock"
+	"github.com/Giordyfish/drand/client/test/result/mock"
 )
 
 func TestWatcherWatch(t *testing.T) {

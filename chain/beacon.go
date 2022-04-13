@@ -8,7 +8,7 @@ import (
 
 	json "github.com/nikkolasg/hexjson"
 
-	"github.com/drand/drand/key"
+	"github.com/Giordyfish/drand/key"
 	"github.com/drand/kyber"
 )
 

@@ -13,8 +13,8 @@ Example:
 	import (
 		"encoding/hex"
 
-		"github.com/drand/drand/client"
-		"github.com/drand/drand/client/http"
+		"github.com/Giordyfish/drand/client"
+		"github.com/Giordyfish/drand/client/http"
 	)
 
 	var urls = []string{

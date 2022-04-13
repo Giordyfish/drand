@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/drand/drand/client"
-	"github.com/drand/drand/log"
-	"github.com/drand/drand/protobuf/drand"
+	"github.com/Giordyfish/drand/client"
+	"github.com/Giordyfish/drand/log"
+	"github.com/Giordyfish/drand/protobuf/drand"
 
 	bds "github.com/ipfs/go-ds-badger2"
 	"github.com/libp2p/go-libp2p-core/crypto"

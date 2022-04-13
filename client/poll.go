@@ -4,8 +4,8 @@ import (
 	"context"
 	"time"
 
-	"github.com/drand/drand/chain"
-	"github.com/drand/drand/log"
+	"github.com/Giordyfish/drand/chain"
+	"github.com/Giordyfish/drand/log"
 )
 
 // PollingWatcher generalizes the `Watch` interface for clients which learn new values

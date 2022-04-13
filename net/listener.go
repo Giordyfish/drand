@@ -6,9 +6,9 @@ import (
 	"net"
 	"net/http"
 
-	"github.com/drand/drand/log"
-	"github.com/drand/drand/metrics"
-	"github.com/drand/drand/protobuf/drand"
+	"github.com/Giordyfish/drand/log"
+	"github.com/Giordyfish/drand/metrics"
+	"github.com/Giordyfish/drand/protobuf/drand"
 
 	grpc_prometheus "github.com/grpc-ecosystem/go-grpc-prometheus"
 	http_grpc "github.com/weaveworks/common/httpgrpc"

@@ -9,9 +9,9 @@ import (
 	"sync"
 	"time"
 
-	"github.com/drand/drand/log"
-	"github.com/drand/drand/metrics"
-	"github.com/drand/drand/protobuf/drand"
+	"github.com/Giordyfish/drand/log"
+	"github.com/Giordyfish/drand/metrics"
+	"github.com/Giordyfish/drand/protobuf/drand"
 	"github.com/weaveworks/common/httpgrpc"
 	httpgrpcserver "github.com/weaveworks/common/httpgrpc/server"
 	"google.golang.org/grpc"

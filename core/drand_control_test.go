@@ -4,8 +4,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/drand/drand/key"
-	"github.com/drand/drand/log"
+	"github.com/Giordyfish/drand/key"
+	"github.com/Giordyfish/drand/log"
 	"github.com/drand/kyber"
 	"github.com/drand/kyber/util/random"
 	clock "github.com/jonboulle/clockwork"

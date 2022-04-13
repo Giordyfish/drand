@@ -12,7 +12,7 @@
 package drand
 
 import (
-	dkg "github.com/drand/drand/protobuf/crypto/dkg"
+	dkg "github.com/Giordyfish/drand/protobuf/crypto/dkg"
 	proto "github.com/golang/protobuf/proto"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"

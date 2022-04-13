@@ -7,11 +7,11 @@ import (
 	"net/http/httptest"
 	"os"
 
-	"github.com/drand/drand/cmd/client/lib"
-	dhttp "github.com/drand/drand/http"
-	"github.com/drand/drand/log"
-	"github.com/drand/drand/metrics"
-	"github.com/drand/drand/metrics/pprof"
+	"github.com/Giordyfish/drand/cmd/client/lib"
+	dhttp "github.com/Giordyfish/drand/http"
+	"github.com/Giordyfish/drand/log"
+	"github.com/Giordyfish/drand/metrics"
+	"github.com/Giordyfish/drand/metrics/pprof"
 
 	"github.com/gorilla/handlers"
 	grpc_prometheus "github.com/grpc-ecosystem/go-grpc-prometheus"

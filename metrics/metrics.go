@@ -8,7 +8,7 @@ import (
 	"runtime"
 	"strings"
 
-	"github.com/drand/drand/log"
+	"github.com/Giordyfish/drand/log"
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/prometheus/client_golang/prometheus/promhttp"
 )

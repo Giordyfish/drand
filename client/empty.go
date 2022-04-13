@@ -5,7 +5,7 @@ import (
 	"errors"
 	"time"
 
-	"github.com/drand/drand/chain"
+	"github.com/Giordyfish/drand/chain"
 )
 
 const emptyClientStringerValue = "EmptyClient"

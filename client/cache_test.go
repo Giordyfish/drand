@@ -5,7 +5,7 @@ import (
 	"sync"
 	"testing"
 
-	"github.com/drand/drand/client/test/result/mock"
+	"github.com/Giordyfish/drand/client/test/result/mock"
 )
 
 func TestCacheGet(t *testing.T) {

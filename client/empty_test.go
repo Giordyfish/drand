@@ -6,7 +6,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/drand/drand/chain"
+	"github.com/Giordyfish/drand/chain"
 )
 
 func TestEmptyClient(t *testing.T) {

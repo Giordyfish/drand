@@ -11,7 +11,7 @@ import (
 	"path"
 	"time"
 
-	dlog "github.com/drand/drand/log"
+	dlog "github.com/Giordyfish/drand/log"
 
 	"github.com/ipfs/go-datastore"
 	"github.com/ipfs/go-datastore/namespace"

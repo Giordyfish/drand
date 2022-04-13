@@ -10,7 +10,7 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/drand/drand/demo/lib"
+	"github.com/Giordyfish/drand/demo/lib"
 )
 
 func installDrand() {

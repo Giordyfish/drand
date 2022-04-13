@@ -3,8 +3,8 @@ package beacon
 import (
 	"sync"
 
-	"github.com/drand/drand/chain"
-	"github.com/drand/drand/key"
+	"github.com/Giordyfish/drand/chain"
+	"github.com/Giordyfish/drand/key"
 	"github.com/drand/kyber/share"
 )
 

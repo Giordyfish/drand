@@ -5,7 +5,7 @@ import (
 
 	dkg "github.com/drand/kyber/share/dkg"
 
-	proto "github.com/drand/drand/protobuf/drand"
+	proto "github.com/Giordyfish/drand/protobuf/drand"
 )
 
 // Index is the index of the node

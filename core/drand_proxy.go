@@ -5,9 +5,9 @@ import (
 	"net"
 	"time"
 
-	"github.com/drand/drand/chain"
-	"github.com/drand/drand/client"
-	"github.com/drand/drand/protobuf/drand"
+	"github.com/Giordyfish/drand/chain"
+	"github.com/Giordyfish/drand/client"
+	"github.com/Giordyfish/drand/protobuf/drand"
 
 	"google.golang.org/grpc/metadata"
 	"google.golang.org/grpc/peer"

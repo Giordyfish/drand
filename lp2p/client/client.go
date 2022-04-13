@@ -5,11 +5,11 @@ import (
 	"encoding/hex"
 	"sync"
 
-	"github.com/drand/drand/chain"
-	"github.com/drand/drand/client"
-	"github.com/drand/drand/log"
-	"github.com/drand/drand/lp2p"
-	"github.com/drand/drand/protobuf/drand"
+	"github.com/Giordyfish/drand/chain"
+	"github.com/Giordyfish/drand/client"
+	"github.com/Giordyfish/drand/log"
+	"github.com/Giordyfish/drand/lp2p"
+	"github.com/Giordyfish/drand/protobuf/drand"
 
 	pubsub "github.com/libp2p/go-libp2p-pubsub"
 	"golang.org/x/xerrors"

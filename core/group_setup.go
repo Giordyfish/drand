@@ -10,11 +10,11 @@ import (
 	"sync"
 	"time"
 
-	"github.com/drand/drand/chain"
-	"github.com/drand/drand/key"
-	"github.com/drand/drand/log"
-	"github.com/drand/drand/net"
-	"github.com/drand/drand/protobuf/drand"
+	"github.com/Giordyfish/drand/chain"
+	"github.com/Giordyfish/drand/key"
+	"github.com/Giordyfish/drand/log"
+	"github.com/Giordyfish/drand/net"
+	"github.com/Giordyfish/drand/protobuf/drand"
 	clock "github.com/jonboulle/clockwork"
 )
 

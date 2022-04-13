@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/drand/drand/client"
-	"github.com/drand/drand/client/test/result/mock"
+	"github.com/Giordyfish/drand/client"
+	"github.com/Giordyfish/drand/client/test/result/mock"
 )
 
 func mockClientWithVerifiableResults(n int) (client.Client, []mock.Result, error) {

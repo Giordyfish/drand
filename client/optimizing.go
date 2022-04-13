@@ -10,8 +10,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/drand/drand/chain"
-	"github.com/drand/drand/log"
+	"github.com/Giordyfish/drand/chain"
+	"github.com/Giordyfish/drand/log"
 	"github.com/hashicorp/go-multierror"
 )
 

@@ -6,8 +6,8 @@ import (
 	"encoding/binary"
 	"time"
 
-	"github.com/drand/drand/key"
-	"github.com/drand/drand/log"
+	"github.com/Giordyfish/drand/key"
+	"github.com/Giordyfish/drand/log"
 	"github.com/drand/kyber"
 )
 

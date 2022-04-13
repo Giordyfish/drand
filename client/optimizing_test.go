@@ -6,8 +6,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/drand/drand/client/test/result/mock"
-	"github.com/drand/drand/log"
+	"github.com/Giordyfish/drand/client/test/result/mock"
+	"github.com/Giordyfish/drand/log"
 )
 
 // waitForSpeedTest waits until all clients have had their initial speed test.

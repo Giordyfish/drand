@@ -4,7 +4,7 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/drand/drand/log"
+	"github.com/Giordyfish/drand/log"
 
 	lru "github.com/hashicorp/golang-lru"
 )

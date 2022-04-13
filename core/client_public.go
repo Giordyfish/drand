@@ -3,10 +3,10 @@ package core
 import (
 	"context"
 
-	"github.com/drand/drand/chain"
-	"github.com/drand/drand/key"
-	"github.com/drand/drand/net"
-	"github.com/drand/drand/protobuf/drand"
+	"github.com/Giordyfish/drand/chain"
+	"github.com/Giordyfish/drand/key"
+	"github.com/Giordyfish/drand/net"
+	"github.com/Giordyfish/drand/protobuf/drand"
 	"github.com/drand/kyber/encrypt/ecies"
 	"google.golang.org/grpc"
 )

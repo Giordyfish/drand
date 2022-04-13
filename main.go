@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/drand/drand/cmd/drand-cli"
+	"github.com/Giordyfish/drand/cmd/drand-cli"
 )
 
 func main() {

@@ -5,8 +5,7 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/drand/drand/chain"
-	"github.com/drand/drand/key"
+	"github.com/Giordyfish/drand/key"
 	"github.com/drand/kyber/sign/bls"
 	"github.com/drand/kyber/util/random"
 )

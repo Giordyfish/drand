@@ -6,8 +6,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/drand/drand/chain"
-	"github.com/drand/drand/test"
+	"github.com/Giordyfish/drand/chain"
+	"github.com/Giordyfish/drand/test"
 )
 
 // fakeChainInfo creates a chain info object for use in tests.

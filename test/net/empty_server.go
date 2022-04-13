@@ -3,7 +3,7 @@ package net
 import (
 	"context"
 
-	"github.com/drand/drand/protobuf/drand"
+	"github.com/Giordyfish/drand/protobuf/drand"
 )
 
 // EmptyServer is an PublicServer + ProtocolServer that does nothing

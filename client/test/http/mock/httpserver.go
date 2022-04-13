@@ -7,11 +7,11 @@ import (
 	"testing"
 	"time"
 
-	"github.com/drand/drand/chain"
-	"github.com/drand/drand/core"
-	dhttp "github.com/drand/drand/http"
-	"github.com/drand/drand/protobuf/drand"
-	"github.com/drand/drand/test/mock"
+	"github.com/Giordyfish/drand/chain"
+	"github.com/Giordyfish/drand/core"
+	dhttp "github.com/Giordyfish/drand/http"
+	"github.com/Giordyfish/drand/protobuf/drand"
+	"github.com/Giordyfish/drand/test/mock"
 )
 
 // NewMockHTTPPublicServer creates a mock drand HTTP server for testing.

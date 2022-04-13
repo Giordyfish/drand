@@ -15,9 +15,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/drand/drand/key"
-	"github.com/drand/drand/protobuf/drand"
-	"github.com/drand/drand/test"
+	"github.com/Giordyfish/drand/key"
+	"github.com/Giordyfish/drand/protobuf/drand"
+	"github.com/Giordyfish/drand/test"
 	"github.com/kabukky/httpscerts"
 	json "github.com/nikkolasg/hexjson"
 )

@@ -4,10 +4,10 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/drand/drand/chain"
-	"github.com/drand/drand/key"
-	pdkg "github.com/drand/drand/protobuf/crypto/dkg"
-	"github.com/drand/drand/protobuf/drand"
+	"github.com/Giordyfish/drand/chain"
+	"github.com/Giordyfish/drand/key"
+	pdkg "github.com/Giordyfish/drand/protobuf/crypto/dkg"
+	"github.com/Giordyfish/drand/protobuf/drand"
 	"github.com/drand/kyber"
 	"github.com/drand/kyber/share/dkg"
 )

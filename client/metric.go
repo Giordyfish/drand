@@ -4,8 +4,8 @@ import (
 	"context"
 	"time"
 
-	"github.com/drand/drand/chain"
-	"github.com/drand/drand/metrics"
+	"github.com/Giordyfish/drand/chain"
+	"github.com/Giordyfish/drand/metrics"
 )
 
 func newWatchLatencyMetricClient(base Client, info *chain.Info) Client {

@@ -12,7 +12,7 @@ import (
 	dkg "github.com/drand/kyber/share/dkg"
 	"github.com/drand/kyber/util/random"
 
-	proto "github.com/drand/drand/protobuf/drand"
+	proto "github.com/Giordyfish/drand/protobuf/drand"
 )
 
 // Pair is a wrapper around a random scalar  and the corresponding public

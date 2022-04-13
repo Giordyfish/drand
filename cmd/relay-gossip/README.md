@@ -1,5 +1,6 @@
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
 ## Table of Contents
 
 - [Drand Pubsub Relay](#drand-pubsub-relay)
@@ -156,8 +157,8 @@ import (
 	"fmt"
 
 	"github.com/alanshaw/drand-gossipsub-client-demo/util"
-	"github.com/drand/drand/client"
-	gclient "github.com/drand/drand/lp2p/client"
+	"github.com/Giordyfish/drand/client"
+	gclient "github.com/Giordyfish/drand/lp2p/client"
 )
 
 const (
@@ -200,9 +201,9 @@ import (
 	"fmt"
 
 	"github.com/alanshaw/drand-gossipsub-client-demo/util"
-	"github.com/drand/drand/client"
-	"github.com/drand/drand/client/http"
-	gclient "github.com/drand/drand/lp2p/client"
+	"github.com/Giordyfish/drand/client"
+	"github.com/Giordyfish/drand/client/http"
+	gclient "github.com/Giordyfish/drand/lp2p/client"
 )
 
 const (
@@ -253,9 +254,9 @@ import (
 	"fmt"
 
 	"github.com/alanshaw/drand-gossipsub-client-demo/util"
-	"github.com/drand/drand/client"
-	"github.com/drand/drand/client/http"
-	gclient "github.com/drand/drand/lp2p/client"
+	"github.com/Giordyfish/drand/client"
+	"github.com/Giordyfish/drand/client/http"
+	gclient "github.com/Giordyfish/drand/lp2p/client"
 )
 
 const (

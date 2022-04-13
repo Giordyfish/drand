@@ -10,7 +10,7 @@ Example:
 		"encoding/hex"
 		"fmt"
 
-		"github.com/drand/drand/client"
+		"github.com/Giordyfish/drand/client"
 	)
 
 	var chainHash, _ = hex.DecodeString("8990e7a9aaed2ffed73dbd7092123d6f289930540d7651336225dc172e51b2ce")

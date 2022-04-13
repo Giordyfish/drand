@@ -3,8 +3,8 @@ package core
 import (
 	"testing"
 
-	"github.com/drand/drand/key"
-	pdkg "github.com/drand/drand/protobuf/crypto/dkg"
+	"github.com/Giordyfish/drand/key"
+	pdkg "github.com/Giordyfish/drand/protobuf/crypto/dkg"
 	"github.com/drand/kyber/share/dkg"
 	"github.com/drand/kyber/util/random"
 	"github.com/stretchr/testify/require"

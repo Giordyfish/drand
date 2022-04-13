@@ -7,7 +7,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/drand/drand/test/mock"
+	"github.com/Giordyfish/drand/test/mock"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
 )

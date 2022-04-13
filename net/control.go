@@ -7,9 +7,9 @@ import (
 	"strings"
 	"time"
 
-	control "github.com/drand/drand/protobuf/drand"
+	control "github.com/Giordyfish/drand/protobuf/drand"
 
-	"github.com/drand/drand/log"
+	"github.com/Giordyfish/drand/log"
 	"google.golang.org/grpc"
 )
 

@@ -6,12 +6,12 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/drand/drand/chain"
-	"github.com/drand/drand/chain/beacon"
-	"github.com/drand/drand/entropy"
-	"github.com/drand/drand/key"
-	"github.com/drand/drand/net"
-	"github.com/drand/drand/protobuf/drand"
+	"github.com/Giordyfish/drand/chain"
+	"github.com/Giordyfish/drand/chain/beacon"
+	"github.com/Giordyfish/drand/entropy"
+	"github.com/Giordyfish/drand/key"
+	"github.com/Giordyfish/drand/net"
+	"github.com/Giordyfish/drand/protobuf/drand"
 	"github.com/drand/kyber/encrypt/ecies"
 )
 

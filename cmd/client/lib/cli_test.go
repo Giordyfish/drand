@@ -11,9 +11,9 @@ import (
 	"runtime"
 	"testing"
 
-	"github.com/drand/drand/client"
-	httpmock "github.com/drand/drand/client/test/http/mock"
-	"github.com/drand/drand/test/mock"
+	"github.com/Giordyfish/drand/client"
+	httpmock "github.com/Giordyfish/drand/client/test/http/mock"
+	"github.com/Giordyfish/drand/test/mock"
 	"github.com/urfave/cli/v2"
 )
 

@@ -8,10 +8,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/drand/drand/client"
-	"github.com/drand/drand/client/grpc"
-	"github.com/drand/drand/protobuf/drand"
-	"github.com/drand/drand/test/mock"
+	"github.com/Giordyfish/drand/client"
+	"github.com/Giordyfish/drand/client/grpc"
+	"github.com/Giordyfish/drand/protobuf/drand"
+	"github.com/Giordyfish/drand/test/mock"
 	"github.com/stretchr/testify/require"
 
 	json "github.com/nikkolasg/hexjson"

@@ -6,8 +6,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/drand/drand/chain"
-	"github.com/drand/drand/client/test/result/mock"
+	"github.com/Giordyfish/drand/chain"
+	"github.com/Giordyfish/drand/client/test/result/mock"
 )
 
 // MockClient provide a mocked client interface

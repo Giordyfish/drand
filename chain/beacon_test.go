@@ -3,7 +3,7 @@ package chain
 import (
 	"testing"
 
-	"github.com/drand/drand/key"
+	"github.com/Giordyfish/drand/key"
 	"github.com/drand/kyber/util/random"
 )
 

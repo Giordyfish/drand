@@ -9,8 +9,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/drand/drand/key"
-	"github.com/drand/drand/net"
+	"github.com/Giordyfish/drand/key"
+	"github.com/Giordyfish/drand/net"
 	"github.com/drand/kyber"
 	"github.com/drand/kyber/pairing/bn256"
 	"github.com/drand/kyber/util/random"

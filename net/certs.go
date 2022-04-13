@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"io/ioutil"
 
-	"github.com/drand/drand/log"
+	"github.com/Giordyfish/drand/log"
 )
 
 // CertManager is used to managed certificates. It is most commonly used for

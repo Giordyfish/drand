@@ -10,14 +10,14 @@ import (
 	"path"
 	"time"
 
-	"github.com/drand/drand/client/grpc"
-	"github.com/drand/drand/core"
-	"github.com/drand/drand/fs"
-	"github.com/drand/drand/key"
-	"github.com/drand/drand/log"
-	"github.com/drand/drand/net"
-	"github.com/drand/drand/protobuf/drand"
-	"github.com/drand/drand/test"
+	"github.com/Giordyfish/drand/client/grpc"
+	"github.com/Giordyfish/drand/core"
+	"github.com/Giordyfish/drand/fs"
+	"github.com/Giordyfish/drand/key"
+	"github.com/Giordyfish/drand/log"
+	"github.com/Giordyfish/drand/net"
+	"github.com/Giordyfish/drand/protobuf/drand"
+	"github.com/Giordyfish/drand/test"
 	"github.com/kabukky/httpscerts"
 )
 

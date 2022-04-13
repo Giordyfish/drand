@@ -7,7 +7,7 @@ import (
 	"path"
 	"testing"
 
-	"github.com/drand/drand/log"
+	"github.com/Giordyfish/drand/log"
 )
 
 func TestCreateThenLoadPrivKey(t *testing.T) {

@@ -10,8 +10,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/drand/drand/protobuf/drand"
-	testnet "github.com/drand/drand/test/net"
+	"github.com/Giordyfish/drand/protobuf/drand"
+	testnet "github.com/Giordyfish/drand/test/net"
 	"github.com/kabukky/httpscerts"
 	"github.com/stretchr/testify/require"
 )

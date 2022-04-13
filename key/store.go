@@ -7,7 +7,7 @@ import (
 	"reflect"
 
 	"github.com/BurntSushi/toml"
-	"github.com/drand/drand/fs"
+	"github.com/Giordyfish/drand/fs"
 )
 
 // Store abstracts the loading and saving of any private/public cryptographic

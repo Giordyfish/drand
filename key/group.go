@@ -17,7 +17,7 @@ import (
 	dkg "github.com/drand/kyber/share/dkg"
 	"golang.org/x/crypto/blake2b"
 
-	proto "github.com/drand/drand/protobuf/drand"
+	proto "github.com/Giordyfish/drand/protobuf/drand"
 )
 
 // XXX new256 returns an error so we make a wrapper around

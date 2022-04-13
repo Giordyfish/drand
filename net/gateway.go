@@ -7,7 +7,7 @@ import (
 
 	"google.golang.org/grpc"
 
-	"github.com/drand/drand/protobuf/drand"
+	"github.com/Giordyfish/drand/protobuf/drand"
 )
 
 // PrivateGateway is the main interface to communicate to other drand nodes. It

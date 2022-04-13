@@ -3,7 +3,7 @@ package main
 import (
 	"testing"
 
-	"github.com/drand/drand/demo/lib"
+	"github.com/Giordyfish/drand/demo/lib"
 )
 
 func TestLocalOrchestration(t *testing.T) {

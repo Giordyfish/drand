@@ -3,7 +3,7 @@ package cache
 import (
 	"sync"
 
-	"github.com/drand/drand/client"
+	"github.com/Giordyfish/drand/client"
 )
 
 // MapCache is a simple cache that stores data in memory.

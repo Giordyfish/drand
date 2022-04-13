@@ -4,7 +4,7 @@ import (
 	"context"
 	"net/http"
 
-	"github.com/drand/drand/protobuf/drand"
+	"github.com/Giordyfish/drand/protobuf/drand"
 	"google.golang.org/grpc"
 )
 

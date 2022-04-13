@@ -8,8 +8,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/drand/drand/chain"
-	"github.com/drand/drand/key"
+	"github.com/Giordyfish/drand/chain"
+	"github.com/Giordyfish/drand/key"
 	"github.com/drand/kyber/share"
 	"github.com/drand/kyber/sign/tbls"
 	"github.com/drand/kyber/util/random"

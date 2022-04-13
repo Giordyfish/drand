@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"sync"
 
-	"github.com/drand/drand/chain"
-	"github.com/drand/drand/log"
+	"github.com/Giordyfish/drand/chain"
+	"github.com/Giordyfish/drand/log"
 )
 
 // newVerifyingClient wraps a client to perform `chain.Verify` on emitted results.

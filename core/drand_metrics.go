@@ -5,7 +5,7 @@ import (
 	"errors"
 	"net/http"
 
-	"github.com/drand/drand/net"
+	"github.com/Giordyfish/drand/net"
 )
 
 // PeerMetrics exports a handler for retreiving metric information from group peers
