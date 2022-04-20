@@ -20,6 +20,8 @@ type Beacon struct {
 	Round uint64
 	// Signature is the BLS deterministic signature over Round || PreviousRand
 	Signature []byte
+	// Message is the message to be signed
+	Message []byte
 }
 
 // Equal indicates if two beacons are equal
@@ -45,6 +47,11 @@ func (b *Beacon) Randomness() []byte {
 	return RandomnessFromSignature(b.Signature)
 }
 
+// GetMessage provides the message of the beacon
+func (b *Beacon) GetMessage() []byte {
+	return b.Message
+}
+
 // GetRound provides the round of the beacon
 func (b *Beacon) GetRound() uint64 {
 	return b.Round
@@ -57,7 +64,7 @@ func RandomnessFromSignature(sig []byte) []byte {
 }
 
 func (b *Beacon) String() string {
-	return fmt.Sprintf("{ round: %d, sig: %s, prevSig: %s }", b.Round, shortSigStr(b.Signature), shortSigStr(b.PreviousSig))
+	return fmt.Sprintf("{ round: %d, sig: %s, prevSig: %s, message: %s}", b.Round, shortSigStr(b.Signature), shortSigStr(b.PreviousSig), hex.EncodeToString(b.Message))
 }
 
 // VerifyBeacon returns an error if the given beacon does not verify given the
@@ -67,7 +74,8 @@ func (b *Beacon) String() string {
 func VerifyBeacon(pubkey kyber.Point, b *Beacon) error {
 	prevSig := b.PreviousSig
 	round := b.Round
-	msg := Message(round, prevSig)
+	message := b.Message
+	msg := Message(round, prevSig, message)
 	return key.Scheme.VerifyRecovered(pubkey, msg, b.Signature)
 }
 
@@ -84,10 +92,13 @@ func Verify(pubkey kyber.Point, prevSig, signature []byte, round uint64) error {
 // Message returns a slice of bytes as the message to sign or to verify
 // alongside a beacon signature.
 // H ( prevSig || currRound)
-func Message(currRound uint64, prevSig []byte) []byte {
+func Message(currRound uint64, prevSig []byte, message []byte) []byte {
 	h := sha256.New()
+
 	_, _ = h.Write(prevSig)
+	_, _ = h.Write(message)
 	_, _ = h.Write(RoundToBytes(currRound))
+
 	return h.Sum(nil)
 }
 

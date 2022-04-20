@@ -229,6 +229,9 @@ type PartialBeaconPacket struct {
 	// partial signature - a threshold of them needs to be aggregated to produce
 	// the final beacon at the given round.
 	PartialSig []byte `protobuf:"bytes,3,opt,name=partial_sig,json=partialSig,proto3" json:"partial_sig,omitempty"`
+	//message to be signed
+	Message []byte `protobuf:"bytes,4,opt,name=message,json=message,proto3" json:"message,omitempty"`
+
 }
 
 func (x *PartialBeaconPacket) Reset() {
@@ -273,6 +276,13 @@ func (x *PartialBeaconPacket) GetRound() uint64 {
 func (x *PartialBeaconPacket) GetPreviousSig() []byte {
 	if x != nil {
 		return x.PreviousSig
+	}
+	return nil
+}
+
+func (x *PartialBeaconPacket) GetMessage() []byte {
+	if x != nil {
+		return x.Message
 	}
 	return nil
 }

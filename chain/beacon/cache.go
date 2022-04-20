@@ -112,6 +112,7 @@ func (c *partialCache) getCache(id string, p *drand.PartialBeaconPacket) *roundC
 type roundCache struct {
 	round uint64
 	prev  []byte
+	mess  []byte
 	id    string
 	sigs  map[int][]byte
 }
@@ -120,6 +121,7 @@ func newRoundCache(id string, p *drand.PartialBeaconPacket) *roundCache {
 	return &roundCache{
 		round: p.GetRound(),
 		prev:  p.GetPreviousSig(),
+		mess:  p.GetMessage(),
 		id:    id,
 		sigs:  make(map[int][]byte),
 	}
@@ -143,7 +145,7 @@ func (r *roundCache) Len() int {
 
 // Msg provides the chain for the current round
 func (r *roundCache) Msg() []byte {
-	return chain.Message(r.round, r.prev)
+	return chain.Message(r.round, r.prev, r.mess)
 }
 
 // Partials provides all cached partial signatures

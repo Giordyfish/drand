@@ -13,16 +13,17 @@ import (
 
 var fakeKey = key.NewKeyPair("127.0.0.1:8080")
 
-func generatePartial(idx int, round uint64, prev []byte) *drand.PartialBeaconPacket {
+func generatePartial(idx int, round uint64, prev []byte, message []byte) *drand.PartialBeaconPacket {
 	sh := &share.PriShare{
 		I: idx,
 		V: fakeKey.Key,
 	}
-	msg := chain.Message(round, prev)
+	msg := chain.Message(round, prev, message)
 	sig, _ := key.Scheme.Sign(sh, msg)
 	return &drand.PartialBeaconPacket{
 		Round:       round,
 		PreviousSig: prev,
+		Message:     message,
 		PartialSig:  sig,
 	}
 }
@@ -31,9 +32,10 @@ func TestCacheRound(t *testing.T) {
 	id := "thisismyid"
 	var round uint64 = 64
 	prev := []byte("yesterday was another day")
-	msg := chain.Message(round, prev)
-	partial := generatePartial(1, round, prev)
-	p2 := generatePartial(2, round, prev)
+	message := []byte("sign this message")
+	msg := chain.Message(round, prev, message)
+	partial := generatePartial(1, round, prev, message)
+	p2 := generatePartial(2, round, prev, message)
 	cache := newRoundCache(id, partial)
 	require.True(t, cache.append(partial))
 	require.False(t, cache.append(partial))
@@ -54,9 +56,10 @@ func TestCachePartial(t *testing.T) {
 	cache := newPartialCache(l)
 	var round uint64 = 64
 	prev := []byte("yesterday was another day")
+	message := []byte("sign this message")
 
 	id := roundID(round, prev)
-	p1 := generatePartial(1, round, prev)
+	p1 := generatePartial(1, round, prev, message)
 	cache.Append(p1)
 	require.Equal(t, 1, len(cache.rcvd))
 	require.Equal(t, 1, cache.GetRoundCache(round, prev).Len())
@@ -71,7 +74,8 @@ func TestCachePartial(t *testing.T) {
 	for i := 0; i < MaxPartialsPerNode+10; i++ {
 		newPrev := []byte{1, 9, 6, 9, byte(i)}
 		newID := roundID(round, newPrev)
-		p1bis := generatePartial(1, round, newPrev)
+		newMessage := []byte("sign this message")
+		p1bis := generatePartial(1, round, newPrev, newMessage)
 		cache.Append(p1bis)
 		require.Contains(t, cache.rcvd[1], newID)
 	}
@@ -84,7 +88,7 @@ func TestCachePartial(t *testing.T) {
 	// insert some previous rounds and then flush
 	toFlush := 20
 	for i := 1; i <= toFlush; i++ {
-		p := generatePartial(i+1, round-uint64(i), prev)
+		p := generatePartial(i+1, round-uint64(i), prev, message)
 		cache.Append(p)
 	}
 	total := MaxPartialsPerNode + toFlush
