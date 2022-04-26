@@ -10,6 +10,7 @@ func beaconToProto(b *chain.Beacon) *proto.BeaconPacket {
 		PreviousSig: b.PreviousSig,
 		Round:       b.Round,
 		Signature:   b.Signature,
+		Message:     b.Message,
 	}
 }
 
@@ -18,5 +19,6 @@ func protoToBeacon(p *proto.BeaconPacket) *chain.Beacon {
 		Round:       p.GetRound(),
 		Signature:   p.GetSignature(),
 		PreviousSig: p.GetPreviousSig(),
+		Message:     p.GetMessage(),
 	}
 }
