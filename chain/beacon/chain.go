@@ -90,6 +90,7 @@ var partialCacheStoreLimit = 3
 // signatures when it can
 func (c *chainStore) runAggregator() {
 	lastBeacon, err := c.Last()
+
 	if err != nil {
 		c.l.Fatal("chain_aggregator", "loading", "last_beacon", err)
 	}
@@ -148,6 +149,7 @@ func (c *chainStore) runAggregator() {
 				Round:       roundCache.round,
 				PreviousSig: roundCache.prev,
 				Signature:   finalSig,
+				Message:     roundCache.mess,
 			}
 			c.l.Info("aggregated_beacon", newBeacon.Round)
 			if c.tryAppend(lastBeacon, newBeacon) {
