@@ -105,9 +105,7 @@ func (h *Handler) ProcessPartialBeacon(c context.Context, p *proto.PartialBeacon
 		return nil, fmt.Errorf("invalid round: %d instead of %d", p.GetRound(), currentRound)
 	}
 
-	signed_msg := p.Message
-	fmt.Println(signed_msg)
-	msg := chain.Message(p.GetRound(), p.GetPreviousSig(), p.Message)
+	msg := chain.Message(p.GetRound(), p.GetPreviousSig(), p.GetMessage())
 
 	// XXX Remove that evaluation - find another way to show the current dist.
 	// key being used
@@ -119,13 +117,14 @@ func (h *Handler) ProcessPartialBeacon(c context.Context, p *proto.PartialBeacon
 			"curr_round", currentRound,
 			"msg_sign", shortSigStr(msg),
 			"short_pub", shortPub,
-			"signed_message", string(signed_msg[:]))
+			"signed_message", string(p.GetMessage()))
 		return nil, err
 	}
 	h.l.Debug("process_partial", addr,
 		"prev_sig", shortSigStr(p.GetPreviousSig()),
 		"curr_round", currentRound, "msg_sign",
 		shortSigStr(msg), "short_pub", shortPub,
+		"signed_message", string(p.GetMessage()),
 		"status", "OK")
 	idx, _ := key.Scheme.IndexOf(p.GetPartialSig())
 	if idx == h.crypto.Index() {
@@ -299,9 +298,6 @@ func (h *Handler) broadcastNextPartial(current roundInfo, upon *chain.Beacon) {
 		PartialSig:  currSig,
 		Message:     message,
 	}
-	packet.Message = message
-	fmt.Println("hey", packet.Message)
-	fmt.Println(packet)
 	h.chain.NewValidPartial(h.addr, packet)
 	for _, id := range h.crypto.GetGroup().Nodes {
 		if h.addr == id.Address() {
