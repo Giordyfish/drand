@@ -5,6 +5,7 @@ import (
 	"encoding/hex"
 	"errors"
 	"fmt"
+	"strconv"
 	"strings"
 	"sync"
 	"time"
@@ -104,7 +105,9 @@ func (h *Handler) ProcessPartialBeacon(c context.Context, p *proto.PartialBeacon
 		return nil, fmt.Errorf("invalid round: %d instead of %d", p.GetRound(), currentRound)
 	}
 
-	msg := chain.Message(p.GetRound(), p.GetPreviousSig(), p.GetMessage())
+	signed_msg := p.Message
+	fmt.Println(signed_msg)
+	msg := chain.Message(p.GetRound(), p.GetPreviousSig(), p.Message)
 
 	// XXX Remove that evaluation - find another way to show the current dist.
 	// key being used
@@ -115,7 +118,8 @@ func (h *Handler) ProcessPartialBeacon(c context.Context, p *proto.PartialBeacon
 			"prev_sig", shortSigStr(p.GetPreviousSig()),
 			"curr_round", currentRound,
 			"msg_sign", shortSigStr(msg),
-			"short_pub", shortPub)
+			"short_pub", shortPub,
+			"signed_message", string(signed_msg[:]))
 		return nil, err
 	}
 	h.l.Debug("process_partial", addr,
@@ -267,8 +271,9 @@ func (h *Handler) run(startTime int64) {
 func (h *Handler) broadcastNextPartial(current roundInfo, upon *chain.Beacon) {
 	ctx := context.Background()
 	previousSig := upon.Signature
-	message := upon.Message
 	round := upon.Round + 1
+	message := []byte("Trial message, round is: " + strconv.FormatUint(round, 10))
+	fmt.Println("Message is: ", message)
 	if current.round == upon.Round {
 		// we already have the beacon of the current round for some reasons - on
 		// CI it happens due to time shifts -
@@ -276,8 +281,9 @@ func (h *Handler) broadcastNextPartial(current roundInfo, upon *chain.Beacon) {
 		// tick so we still broadcast a partial signature over it - even though
 		// drand guarantees a threshold of nodes already have it
 		previousSig = upon.PreviousSig
-		message = upon.Message
 		round = current.round
+		message = []byte("Trial message, round is (TS): " + strconv.FormatUint(round, 10))
+		fmt.Println("Message is: ", message)
 	}
 	msg := chain.Message(round, previousSig, message)
 	currSig, err := h.crypto.SignPartial(msg)
@@ -285,12 +291,17 @@ func (h *Handler) broadcastNextPartial(current roundInfo, upon *chain.Beacon) {
 		h.l.Fatal("beacon_round", "err creating signature", "err", err, "round", round)
 		return
 	}
-	h.l.Debug("broadcast_partial", round, "from_prev_sig", shortSigStr(previousSig), "msg_sign", shortSigStr(msg))
+	h.l.Debug("broadcast_partial", round, "from_prev_sig", shortSigStr(previousSig), "msg_sign", shortSigStr(msg), "signed_message", string(message[:]))
+
 	packet := &proto.PartialBeaconPacket{
 		Round:       round,
 		PreviousSig: previousSig,
 		PartialSig:  currSig,
+		Message:     message,
 	}
+	packet.Message = message
+	fmt.Println("hey", packet.Message)
+	fmt.Println(packet)
 	h.chain.NewValidPartial(h.addr, packet)
 	for _, id := range h.crypto.GetGroup().Nodes {
 		if h.addr == id.Address() {
