@@ -5,7 +5,7 @@ import (
 	"encoding/hex"
 	"errors"
 	"fmt"
-	"strconv"
+	"os/exec"
 	"strings"
 	"sync"
 	"time"
@@ -271,8 +271,9 @@ func (h *Handler) broadcastNextPartial(current roundInfo, upon *chain.Beacon) {
 	ctx := context.Background()
 	previousSig := upon.Signature
 	round := upon.Round + 1
-	message := []byte("Trial message, round is: " + strconv.FormatUint(round, 10))
-	fmt.Println("Message is: ", message)
+	message := getMessageFromProcess(h)
+	//message := []byte("Trial message, round is: " + strconv.FormatUint(round, 10))
+	//fmt.Println("Message is: ", message)
 	if current.round == upon.Round {
 		// we already have the beacon of the current round for some reasons - on
 		// CI it happens due to time shifts -
@@ -281,8 +282,9 @@ func (h *Handler) broadcastNextPartial(current roundInfo, upon *chain.Beacon) {
 		// drand guarantees a threshold of nodes already have it
 		previousSig = upon.PreviousSig
 		round = current.round
-		message = []byte("Trial message, round is (TS): " + strconv.FormatUint(round, 10))
-		fmt.Println("Message is: ", message)
+		message = getMessageFromProcess(h)
+		//message = []byte("Trial message, round is (TS): " + strconv.FormatUint(round, 10))
+		//fmt.Println("Message is: ", message)
 	}
 	msg := chain.Message(round, previousSig, message)
 	currSig, err := h.crypto.SignPartial(msg)
@@ -368,4 +370,18 @@ func shortSigStr(sig []byte) string {
 		max = len(sig)
 	}
 	return hex.EncodeToString(sig[0:max])
+}
+
+// getMessageFromProcess is where the message is taken from, during the generation
+// of the new beacon in broadcastNextPartial
+func getMessageFromProcess(h *Handler) []byte {
+	out, err := exec.Command("date", "+%F").Output()
+	if err != nil {
+		h.l.Error(err)
+	}
+	out = out[:len(out)-1] // remove newline from date
+	context_msg := []byte("The date is ")
+	message := append(context_msg, out...)
+	//fmt.Printf("The date is %s\n", out)
+	return message
 }
